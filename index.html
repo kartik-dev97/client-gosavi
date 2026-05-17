@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Growth Proposal — Gosavi Hospital & Critical Center</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink:        #1A1714;
+  --ink-2:      #3C3830;
+  --ink-3:      #7A746C;
+  --ink-4:      #ADA9A2;
+  --bg:         #FBF8F4;
+  --bg-card:    #FFFFFF;
+  --bg-warm:    #F5F1EB;
+  --bg-dark:    #1C1916;
+  --peach:      #F4A57A;
+  --peach-deep: #D97B4A;
+  --peach-pale: #FDF0E8;
+  --peach-mid:  #EF9268;
+  --green:      #2A6B4E;
+  --green-mid:  #358A63;
+  --green-pale: #EBF4EF;
+  --border:     #EBE6DE;
+  --border-mid: #D6D0C6;
+  --r:          12px;
+  --r-sm:       8px;
+  --title:      'Plus Jakarta Sans', system-ui, sans-serif;
+  --body:       'DM Sans', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--body);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: 900px; margin: 0 auto; padding: 0 36px; }
+
+/* ── HEADER ── */
+.site-header {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  padding: 22px 0;
+  position: sticky; top: 0; z-index: 100;
+}
+.header-inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.wordmark { display: flex; align-items: center; gap: 10px; }
+.wordmark-dot { width: 8px; height: 8px; background: var(--peach-deep); border-radius: 50%; }
+.wordmark-text { font-family: var(--title); font-weight: 700; font-size: 14px; letter-spacing: -0.01em; color: var(--ink); }
+.wordmark-text span { font-weight: 400; color: var(--ink-4); margin-left: 2px; }
+.header-right { font-size: 12px; color: var(--ink-4); text-align: right; line-height: 1.9; font-family: var(--body); font-weight: 300; }
+.header-right strong { color: var(--ink-2); font-weight: 500; }
+
+/* ── HERO ── */
+.hero {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  padding: 80px 0 68px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -120px; right: -120px;
+  width: 480px; height: 480px;
+  background: radial-gradient(circle, rgba(244,165,122,0.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+.eyebrow-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--title); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--peach-deep); margin-bottom: 20px;
+}
+.eyebrow-tag::before {
+  content: ''; display: block;
+  width: 18px; height: 2px;
+  background: var(--peach-mid); border-radius: 2px;
+}
+.hero h1 {
+  font-family: var(--title);
+  font-size: clamp(36px, 5.5vw, 56px);
+  font-weight: 700;
+  line-height: 1.07;
+  color: var(--ink);
+  max-width: 560px;
+  margin-bottom: 20px;
+  letter-spacing: -0.025em;
+}
+.hero h1 em { font-style: normal; color: var(--peach-deep); }
+.hero-desc {
+  font-size: 15px; font-weight: 400;
+  color: var(--ink-3); max-width: 500px;
+  line-height: 1.75; margin-bottom: 52px;
+}
+.hero-stats { display: flex; flex-wrap: wrap; gap: 0; }
+.stat-item { padding: 0 32px 0 0; margin-right: 32px; border-right: 1px solid var(--border); }
+.stat-item:last-child { border-right: none; margin-right: 0; }
+.stat-num {
+  font-family: var(--title); font-size: 28px; font-weight: 700;
+  line-height: 1; color: var(--ink); margin-bottom: 4px; letter-spacing: -0.02em;
+}
+.stat-lbl { font-size: 11px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-4); }
+
+/* ── SECTIONS ── */
+.section { padding: 72px 0; border-bottom: 1px solid var(--border); }
+.section:last-child { border-bottom: none; }
+.sec-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.sec-num {
+  font-family: var(--title); font-size: 11px; font-weight: 700;
+  color: var(--peach-deep); letter-spacing: 0.12em;
+}
+.sec-tag {
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-4);
+}
+.sec-title {
+  font-family: var(--title);
+  font-size: clamp(26px, 3.8vw, 38px);
+  font-weight: 700; line-height: 1.12;
+  color: var(--ink); margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+.sec-sub {
+  font-size: 15px; font-weight: 400;
+  color: var(--ink-3); max-width: 520px;
+  line-height: 1.7; margin-bottom: 36px;
+}
+
+/* ── CARDS ── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 28px 32px;
+}
+.card-label {
+  font-family: var(--title); font-size: 10px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-4); margin-bottom: 5px;
+}
+.card-title {
+  font-family: var(--title); font-size: 20px; font-weight: 700;
+  color: var(--ink); line-height: 1.2; letter-spacing: -0.01em;
+}
+.card-body {
+  font-size: 14px; font-weight: 400;
+  color: var(--ink-3); line-height: 1.7; margin-top: 8px;
+}
+
+/* ── FEATURE LIST ── */
+.feat-list { list-style: none; margin-top: 20px; }
+.feat-list li {
+  display: flex; gap: 12px; align-items: flex-start;
+  font-size: 14px; font-weight: 400; color: var(--ink-2);
+  padding: 10px 0; border-bottom: 1px solid var(--bg-warm); line-height: 1.5;
+}
+.feat-list li:last-child { border-bottom: none; }
+.fi {
+  width: 17px; height: 17px; margin-top: 1px;
+  flex-shrink: 0; color: var(--peach-deep);
+}
+
+/* ── PRICE ── */
+.price-tag { margin-top: 24px; display: flex; align-items: baseline; gap: 6px; }
+.price-amt {
+  font-family: var(--title); font-size: 34px; font-weight: 700;
+  color: var(--ink); line-height: 1; letter-spacing: -0.02em;
+}
+.price-note { font-size: 13px; color: var(--ink-4); font-weight: 400; }
+
+/* ── BADGES ── */
+.badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-family: var(--title); font-size: 10px; font-weight: 700;
+  letter-spacing: 0.05em; padding: 5px 12px; border-radius: 100px;
+}
+.badge-peach { background: var(--peach-pale); color: var(--peach-deep); border: 1px solid rgba(215,123,74,0.18); }
+.badge-green { background: var(--green-pale); color: var(--green); border: 1px solid rgba(42,107,78,0.15); }
+.badge-soft  { background: var(--bg-warm); color: var(--ink-3); border: 1px solid var(--border); }
+
+/* ── INFO BOX ── */
+.info-box {
+  display: flex; gap: 14px; align-items: flex-start;
+  background: var(--peach-pale); border: 1px solid rgba(215,123,74,0.18);
+  border-radius: var(--r-sm); padding: 16px 20px; margin-top: 18px;
+}
+.info-box-ico { color: var(--peach-deep); flex-shrink: 0; margin-top: 2px; }
+.info-box p { font-size: 13.5px; color: #5A3214; line-height: 1.65; font-weight: 400; }
+.info-box strong { color: #3B1E08; font-weight: 600; }
+
+/* ── SOCIAL GRID ── */
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px; margin-top: 22px;
+}
+.si {
+  background: var(--bg-warm);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 16px 18px;
+}
+.si-head { display: flex; align-items: center; gap: 10px; margin-bottom: 7px; }
+.si-logo {
+  width: 32px; height: 32px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.l-fb  { background: #1877F2; }
+.l-ig  { background: linear-gradient(135deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888); }
+.l-wa  { background: #25D366; }
+.l-gm  { background: #fff; border: 1px solid #E0E0E0; }
+.l-biz { background: #0F4C81; }
+.l-x   { background: #14171A; }
+.si-name { font-family: var(--title); font-size: 13px; font-weight: 700; color: var(--ink); }
+.si-desc { font-size: 12px; color: var(--ink-3); line-height: 1.55; font-weight: 400; }
+
+/* ── DARK BAND (Admin Panel) ── */
+.dark-band {
+  background: var(--bg-dark);
+  border-radius: var(--r);
+  padding: 40px;
+  position: relative; overflow: hidden;
+}
+.dark-band::before {
+  content: '';
+  position: absolute; top: -80px; right: -80px;
+  width: 320px; height: 320px;
+  background: radial-gradient(circle, rgba(244,165,122,0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+.dark-wm {
+  position: absolute; bottom: -10px; right: 24px;
+  font-family: var(--title); font-size: 88px; font-weight: 700;
+  color: rgba(255,255,255,0.025); line-height: 1;
+  user-select: none; pointer-events: none; letter-spacing: -0.04em;
+}
+.dark-band .badge-green {
+  background: rgba(92,201,154,0.1);
+  color: #5CC99A;
+  border-color: rgba(92,201,154,0.22);
+}
+.dark-band h3 {
+  font-family: var(--title); font-size: 26px; font-weight: 700;
+  color: #fff; margin: 16px 0 10px; line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+.dark-sub {
+  font-size: 14px; font-weight: 400;
+  color: rgba(255,255,255,0.45); max-width: 520px;
+  line-height: 1.75; margin-bottom: 28px;
+}
+.panel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+.ptile {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--r-sm); padding: 18px;
+}
+.ptile-ico { color: var(--peach); margin-bottom: 12px; }
+.ptile-title {
+  font-family: var(--title); font-size: 13px; font-weight: 700;
+  color: #fff; margin-bottom: 5px;
+}
+.ptile-desc { font-size: 12px; color: rgba(255,255,255,0.36); line-height: 1.55; }
+.dur-note {
+  margin-top: 20px;
+  display: flex; align-items: flex-start; gap: 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--r-sm); padding: 14px 18px;
+}
+.dur-note-ico { color: rgba(255,255,255,0.25); flex-shrink: 0; margin-top: 2px; }
+.dur-note p { font-size: 13px; color: rgba(255,255,255,0.38); line-height: 1.65; }
+.dur-note strong { color: rgba(255,255,255,0.62); font-weight: 600; }
+
+/* ── ADS ── */
+.plat-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px; }
+.plat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r); overflow: hidden;
+}
+.plat-top {
+  display: flex; gap: 12px; align-items: center;
+  padding: 18px 20px; border-bottom: 1px solid var(--border);
+}
+.plat-logo {
+  width: 36px; height: 36px; border-radius: 9px;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.pl-fb { background: #1877F2; }
+.pl-gg { background: #fff; border: 1px solid #E0E0E0; }
+.plat-ttl  { font-family: var(--title); font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 1px; }
+.plat-sub2 { font-size: 12px; color: var(--ink-4); font-weight: 400; }
+.plat-body { padding: 14px 20px; }
+.mrow {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 13px; padding: 7px 0;
+  border-bottom: 1px solid var(--bg-warm); color: var(--ink-3); font-weight: 400;
+}
+.mrow:last-child { border-bottom: none; }
+.mrow strong { color: var(--ink); font-weight: 600; font-size: 13px; }
+
+.strat-note {
+  background: var(--peach-pale);
+  border: 1px solid rgba(215,123,74,0.18);
+  border-radius: var(--r-sm); padding: 16px 20px;
+  margin-bottom: 22px; font-size: 14px; color: var(--peach-deep);
+  line-height: 1.65; font-weight: 400;
+}
+.strat-note strong { font-weight: 700; }
+
+/* ── BUDGET ── */
+.budget-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r); overflow: hidden;
+}
+.budget-head {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 22px; border-bottom: 1px solid var(--border);
+  font-family: var(--title); font-size: 13px; font-weight: 700; color: var(--ink);
+}
+.brow {
+  display: flex; align-items: center; gap: 14px;
+  padding: 12px 22px; border-bottom: 1px solid var(--bg-warm); font-size: 14px;
+}
+.brow:last-child { border-bottom: none; }
+.bdot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.blabel { flex: 1; color: var(--ink-2); font-weight: 400; font-size: 13.5px; }
+.bamt { font-family: var(--title); font-weight: 700; color: var(--ink); font-size: 14px; }
+.bpct { font-family: var(--body); font-size: 12px; color: var(--ink-4); margin-left: 4px; font-weight: 400; }
+
+/* ── JOURNEY ── */
+.journey { margin-top: 28px; }
+.ji {
+  display: flex; gap: 22px;
+  padding: 22px 0; border-bottom: 1px solid var(--border);
+}
+.ji:last-child { border-bottom: none; }
+.ji-num {
+  font-family: var(--title); font-size: 36px; font-weight: 700;
+  color: var(--border-mid); line-height: 1; flex-shrink: 0; width: 36px;
+  color: rgba(215,123,74,0.22); letter-spacing: -0.03em;
+}
+.ji-phase {
+  font-family: var(--title); font-size: 10px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--peach-deep); margin-bottom: 4px;
+}
+.ji-title {
+  font-family: var(--title); font-size: 15px; font-weight: 700;
+  color: var(--ink); margin-bottom: 6px; letter-spacing: -0.01em;
+}
+.ji-desc { font-size: 13.5px; font-weight: 400; color: var(--ink-3); line-height: 1.68; }
+
+/* ── PRICING TABLE ── */
+.pricing-wrap {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r); overflow: hidden;
+}
+.ptable { width: 100%; border-collapse: collapse; font-size: 14px; }
+.ptable thead tr { background: var(--ink); }
+.ptable thead th {
+  padding: 14px 20px; text-align: left;
+  font-family: var(--title); font-size: 10px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255,255,255,0.38);
+}
+.ptable thead th:first-child { color: rgba(255,255,255,0.7); }
+.ptable tbody tr { border-bottom: 1px solid var(--border); }
+.ptable tbody tr:last-child { border-bottom: none; }
+.ptable td {
+  padding: 16px 20px; color: var(--ink-3);
+  vertical-align: top; line-height: 1.55; font-weight: 400;
+}
+.ptable td:first-child {
+  font-family: var(--title); color: var(--ink);
+  font-weight: 700; font-size: 13.5px; letter-spacing: -0.01em;
+}
+.ptable td:last-child {
+  font-family: var(--title); font-weight: 700;
+  color: var(--peach-deep); white-space: nowrap;
+}
+.ptable tbody tr:nth-child(even) td { background: var(--bg-warm); }
+.trow td { background: var(--peach-pale) !important; }
+.trow td:first-child, .trow td:last-child { color: var(--peach-deep) !important; }
+
+/* ── CHIPS ── */
+.chips { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+.chip {
+  flex: 1; min-width: 155px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm); padding: 18px 22px;
+}
+.chip-lbl {
+  font-family: var(--title); font-size: 10px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink-4); margin-bottom: 8px;
+}
+.chip-amt {
+  font-family: var(--title); font-size: 28px; font-weight: 700;
+  color: var(--ink); line-height: 1; margin-bottom: 4px; letter-spacing: -0.025em;
+}
+.chip-note { font-size: 12px; color: var(--ink-4); font-weight: 400; }
+
+/* ── FOOTER ── */
+.page-footer {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  padding: 30px 0;
+}
+.footer-inner {
+  display: flex; justify-content: space-between;
+  align-items: center; gap: 12px; flex-wrap: wrap;
+}
+.footer-note { font-size: 12px; color: var(--ink-4); line-height: 1.6; font-weight: 400; }
+
+/* ── UTILS ── */
+.mt-4 { margin-top: 16px; }
+.mt-5 { margin-top: 20px; }
+.mt-6 { margin-top: 24px; }
+.row-flex {
+  display: flex; justify-content: space-between;
+  align-items: flex-start; gap: 12px; flex-wrap: wrap; margin-bottom: 6px;
+}
+.divider { height: 1px; background: var(--border); margin: 28px 0; }
+
+@media (max-width: 640px) {
+  .wrap { padding: 0 20px; }
+  .hero { padding: 52px 0 44px; }
+  .section { padding: 52px 0; }
+  .card { padding: 20px 22px; }
+  .dark-band { padding: 28px 22px; }
+  .stat-item { padding: 0 18px 0 0; margin-right: 18px; }
+  .plat-pair { grid-template-columns: 1fr; }
+  .ptable thead th:nth-child(2), .ptable td:nth-child(2) { display: none; }
+  .chips { flex-direction: column; }
+  .hero h1 { font-size: 32px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="wrap">
+    <div class="header-inner">
+      <div class="wordmark">
+        <div class="wordmark-dot"></div>
+        <div class="wordmark-text">Revearts <span>/ Digital Growth Agency</span></div>
+      </div>
+      <div class="header-right">
+        Prepared for <strong>Gosavi Hospital &amp; Critical Center</strong><br>
+        Chikhli, Buldhana · May 2026
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow-tag">Digital Growth Proposal</div>
+    <h1>A complete digital<br>presence for <em>Gosavi<br>Hospital</em></h1>
+    <p class="hero-desc">Website · Social Media · Online Profiling · Paid Advertising — everything your hospital needs to be found, trusted, and chosen by patients across Chikhli and surrounding villages.</p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">2.85L+</div>
+        <div class="stat-lbl">Reachable population</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">143</div>
+        <div class="stat-lbl">Villages in tehsil</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">90K+</div>
+        <div class="stat-lbl">Smartphone users</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">15 days</div>
+        <div class="stat-lbl">Delivery timeline</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── 01 WEBSITE + SOCIAL + PROFILING ── -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-eyebrow">
+      <span class="sec-num">01</span>
+      <span class="sec-tag">Core Package · 15 Days Delivery</span>
+    </div>
+    <h2 class="sec-title">Website + Social Media &amp; Online Profiling</h2>
+    <p class="sec-sub">A professional digital foundation — website built and all platforms configured, delivered in 15 days.</p>
+
+    <!-- WEBSITE CARD -->
+    <div class="card">
+      <div class="row-flex">
+        <div>
+          <div class="card-label">Website</div>
+          <div class="card-title">Hospital website with online booking</div>
+        </div>
+        <span class="badge badge-green">
+          <!-- check icon -->
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Delivered in 15 days
+        </span>
+      </div>
+      <p class="card-body">Mobile-first, fast-loading hospital website designed to convert visitors into patients — with live status, events, booking, and full content control.</p>
+      <ul class="feat-list">
+        <li>
+          <!-- calendar icon -->
+          <svg class="fi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Online appointment booking with patient confirmation
+        </li>
+        <li>
+          <!-- clock icon -->
+          <svg class="fi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Live hospital status — Open / Closed / Emergency indicator
+        </li>
+        <li>
+          <!-- megaphone / event icon -->
+          <svg class="fi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+          Events &amp; health camp section
+        </li>
+        <li>
+          <!-- user icon -->
+          <svg class="fi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Doctor profiles, departments and services pages
+        </li>
+        <li>
+          <!-- book icon -->
+          <svg class="fi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          Case study section for building patient trust
+        </li>
+        <li>
+          <!-- image icon -->
+          <svg class="fi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          Self-manageable image galleries — no developer needed
+        </li>
+        <li>
+          <!-- message icon -->
+          <svg class="fi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          WhatsApp floating button + social media redirection
+        </li>
+        <li>
+          <!-- search icon -->
+          <svg class="fi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          SEO-optimised, fully mobile responsive, fast loading
+        </li>
+      </ul>
+      <div class="price-tag">
+        <span class="price-amt">₹25,000</span>
+        <span class="price-note">one-time · all-inclusive</span>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <!-- info icon -->
+      <svg class="info-box-ico" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <p><strong>What we need from you:</strong> Patient database &amp; pricing (for booking module configuration), domain purchase — GoDaddy or Google Domains (~₹500–1,000/yr, owned by you) — and hospital photos/content. We handle everything else.</p>
+    </div>
+
+    <!-- SOCIAL MEDIA + ONLINE PROFILING CARD -->
+    <div class="card mt-5">
+      <div class="row-flex">
+        <div>
+          <div class="card-label">Social Media &amp; Online Profiling</div>
+          <div class="card-title">All platforms configured &amp; profiled</div>
+        </div>
+        <span class="badge badge-soft">One-Time Setup</span>
+      </div>
+      <p class="card-body">Professional setup of every platform your patients use — plus complete online business profiling so your hospital appears correctly and consistently everywhere people search.</p>
+
+      <div class="social-grid">
+        <div class="si">
+          <div class="si-head">
+            <div class="si-logo l-fb">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </div>
+            <div class="si-name">Facebook Page</div>
+          </div>
+          <div class="si-desc">Profile, cover, bio, category, contact &amp; verification</div>
+        </div>
+        <div class="si">
+          <div class="si-head">
+            <div class="si-logo l-ig">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </div>
+            <div class="si-name">Instagram</div>
+          </div>
+          <div class="si-desc">Business profile, bio, highlights, story covers, link-in-bio</div>
+        </div>
+        <div class="si">
+          <div class="si-head">
+            <div class="si-logo l-wa">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </div>
+            <div class="si-name">WhatsApp Business</div>
+          </div>
+          <div class="si-desc">Auto-reply, greeting &amp; away messages, catalog, business hours</div>
+        </div>
+        <div class="si">
+          <div class="si-head">
+            <div class="si-logo l-gm">
+              <svg width="18" height="13" viewBox="0 0 48 34"><path d="M44 0H4L0 4v26l4 4h40l4-4V4L44 0z" fill="#4285F4"/><path d="M44 0L24 22 4 0h40z" fill="#34A853"/><path d="M0 4l24 22L0 30V4z" fill="#FBBC05"/><path d="M48 4v26L24 26 48 4z" fill="#EA4335"/></svg>
+            </div>
+            <div class="si-name">Google Business Profile</div>
+          </div>
+          <div class="si-desc">Google Maps listing, photos, hours, services — free &amp; critical</div>
+        </div>
+        <div class="si">
+          <div class="si-head">
+            <div class="si-logo l-biz">
+              <!-- building / directory icon -->
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="si-name">Online Business Profiling</div>
+          </div>
+          <div class="si-desc">JustDial, Practo, Sulekha &amp; local directories — consistent listing everywhere patients search</div>
+        </div>
+        <div class="si">
+          <div class="si-head">
+            <div class="si-logo l-x">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#fff"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </div>
+            <div class="si-name">X / Threads</div>
+          </div>
+          <div class="si-desc">Profile setup and configuration — if requested by client</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── 02 ADMIN PANEL ── -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-eyebrow">
+      <span class="sec-num">02</span>
+      <span class="sec-tag">Complimentary · 1 Month Delivering Period · Included with Package for Year</span>
+    </div>
+    <h2 class="sec-title">Unified Admin Panel</h2>
+    <p class="sec-sub">Beyond the brief — included because you need it, not because you asked for it.</p>
+
+    <div class="dark-band">
+      <div class="dark-wm">Free</div>
+      <span class="badge badge-green">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Complimentary — No additional charge
+      </span>
+      <h3>One dashboard.<br>Full control.</h3>
+      <p class="dark-sub">A combined admin panel that lets your team manage the entire digital presence — update the website, schedule social posts, manage bookings, and monitor performance — without touching code or logging into multiple platforms.</p>
+
+      <div class="panel-grid">
+        <div class="ptile">
+          <div class="ptile-ico">
+            <!-- globe icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="ptile-title">Website Content</div>
+          <div class="ptile-desc">Update images, blogs, events, doctor profiles — live instantly</div>
+        </div>
+        <div class="ptile">
+          <div class="ptile-ico">
+            <!-- send / schedule icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="ptile-title">Social Scheduling</div>
+          <div class="ptile-desc">Post to Facebook, Instagram &amp; WhatsApp from one place</div>
+        </div>
+        <div class="ptile">
+          <div class="ptile-ico">
+            <!-- users icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="ptile-title">Booking Panel</div>
+          <div class="ptile-desc">View and manage all patient appointment bookings centrally</div>
+        </div>
+        <div class="ptile">
+          <div class="ptile-ico">
+            <!-- inbox icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="ptile-title">Query Inbox</div>
+          <div class="ptile-desc">All website &amp; WhatsApp inquiries in a single unified inbox</div>
+        </div>
+        <div class="ptile">
+          <div class="ptile-ico">
+            <!-- bar chart icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <div class="ptile-title">Analytics</div>
+          <div class="ptile-desc">Website visitors, leads, and ad performance at a glance</div>
+        </div>
+        <div class="ptile">
+          <div class="ptile-ico">
+            <!-- shield icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="ptile-title">Monitoring Support</div>
+          <div class="ptile-desc">We monitor performance — you operate with full confidence</div>
+        </div>
+      </div>
+
+      <div class="dur-note">
+        <svg class="dur-note-ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <p><strong>1 month delivery period included.</strong> The admin panel and all configurations are included with the core package and remain active for the full year — no additional cost, no time limit after delivery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── 03 ADS ── -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-eyebrow">
+      <span class="sec-num">03</span>
+      <span class="sec-tag">Ongoing · Monthly</span>
+    </div>
+    <h2 class="sec-title">Online Advertising</h2>
+    <p class="sec-sub">Meta + Google — two platforms covering every patient, from village to town.</p>
+
+    <div class="plat-pair">
+      <div class="plat-card">
+        <div class="plat-top">
+          <div class="plat-logo pl-fb">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </div>
+          <div>
+            <div class="plat-ttl">Meta Ads</div>
+            <div class="plat-sub2">Facebook + Instagram · Primary</div>
+          </div>
+        </div>
+        <div class="plat-body">
+          <div class="mrow"><span>CPC India avg.</span><strong>₹5 – ₹25</strong></div>
+          <div class="mrow"><span>Best for</span><strong>Awareness + village reach</strong></div>
+          <div class="mrow"><span>Top format</span><strong>Marathi video / image</strong></div>
+          <div class="mrow"><span>Contact</span><strong>WhatsApp direct</strong></div>
+        </div>
+      </div>
+      <div class="plat-card">
+        <div class="plat-top">
+          <div class="plat-logo pl-gg">
+            <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.1 0 5.9 1.1 8.1 2.9l6-6A23.5 23.5 0 0 0 24 1C14.6 1 6.5 6.6 2.7 14.6l7 5.4C11.5 13.5 17.3 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h12.7C36 32 34.4 34 32 35.4l6.8 5.3c4-3.7 6.3-9.1 6.3-16.2z"/><path fill="#FBBC05" d="M9.7 28.6A14.5 14.5 0 0 1 9 24c0-1.6.3-3.2.7-4.6l-7-5.4A23.5 23.5 0 0 0 .5 24c0 3.8.9 7.4 2.5 10.6l6.7-6z"/><path fill="#34A853" d="M24 46.5c6.5 0 11.9-2.1 15.9-5.8l-6.8-5.3c-2.1 1.4-4.7 2.2-9.1 2.2-6.7 0-12.5-4-14.3-9.9l-6.7 6c3.8 7.9 11.9 12.8 21 12.8z"/></svg>
+          </div>
+          <div>
+            <div class="plat-ttl">Google Ads</div>
+            <div class="plat-sub2">Search + Display · Support</div>
+          </div>
+        </div>
+        <div class="plat-body">
+          <div class="mrow"><span>CPC healthcare</span><strong>₹15 – ₹60</strong></div>
+          <div class="mrow"><span>Best for</span><strong>Intent-driven patients</strong></div>
+          <div class="mrow"><span>Top format</span><strong>Call-only + local search</strong></div>
+          <div class="mrow"><span>Contact</span><strong>Direct call from Google</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="strat-note"><strong>Strategy —</strong> Meta runs first to build name recognition across villages before people need a hospital. Google catches the 15–20% actively searching right now. Together they cover every stage of the patient journey.</div>
+
+    <div class="budget-card">
+      <div class="budget-head">
+        <span>Monthly ad budget split</span>
+        <span class="badge badge-soft">₹9,500 / month total</span>
+      </div>
+      <div class="brow">
+        <div class="bdot" style="background:#1877F2;"></div>
+        <span class="blabel">Meta — Facebook + Instagram (awareness, village reach, Marathi creatives)</span>
+        <span class="bamt">₹5,000 <span class="bpct">53%</span></span>
+      </div>
+      <div class="brow">
+        <div class="bdot" style="background:#EA4335;"></div>
+        <span class="blabel">Google Search — call-only + local search ads</span>
+        <span class="bamt">₹2,000 <span class="bpct">21%</span></span>
+      </div>
+      <div class="brow">
+        <div class="bdot" style="background:#FBBC04;"></div>
+        <span class="blabel">Google Display — Marathi news apps, village reach</span>
+        <span class="bamt">₹500 <span class="bpct">5%</span></span>
+      </div>
+      <div class="brow">
+        <div class="bdot" style="background:#D97B4A;"></div>
+        <span class="blabel">Ad Creative Team — Marathi graphics, video editing, ad copy &amp; design</span>
+        <span class="bamt">₹2,000 <span class="bpct">21%</span></span>
+      </div>
+    </div>
+
+    <div class="card mt-5">
+      <div class="card-label">Patient Journey</div>
+      <div class="card-title" style="margin-bottom:4px;">How ads turn a stranger into a patient</div>
+      <div class="journey">
+        <div class="ji">
+          <div class="ji-num">1</div>
+          <div>
+            <div class="ji-phase">Meta · Awareness</div>
+            <div class="ji-title">Patients see you before they need you</div>
+            <div class="ji-desc">A Marathi video of your doctor plays on Facebook as a farmer scrolls in the evening. He hasn't searched anything — but now he knows Gosavi Hospital. When his family needs care, he remembers.</div>
+          </div>
+        </div>
+        <div class="ji">
+          <div class="ji-num">2</div>
+          <div>
+            <div class="ji-phase">Google · Intent</div>
+            <div class="ji-title">Patients find you when they search</div>
+            <div class="ji-desc">Someone types "hospital near me" — your Maps listing and call-only ad appear at the top. One tap dials directly. No website load, no steps. Village patients prefer calling — this removes every barrier.</div>
+          </div>
+        </div>
+        <div class="ji">
+          <div class="ji-num">3</div>
+          <div>
+            <div class="ji-phase">Both · Retargeting</div>
+            <div class="ji-title">Undecided patients come back</div>
+            <div class="ji-desc">Someone visited the website but didn't book. A Google Display reminder appears on a Marathi news app. A Meta testimonial shows on Instagram. Together they close the loop and convert the hesitant patient.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── 04 PRICING ── -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-eyebrow">
+      <span class="sec-num">04</span>
+      <span class="sec-tag">Investment Summary</span>
+    </div>
+    <h2 class="sec-title">Clear, flat pricing</h2>
+    <p class="sec-sub">No hidden costs. No surprises. Exactly what you pay and what you receive.</p>
+
+    <div class="pricing-wrap">
+      <table class="ptable">
+        <thead>
+          <tr>
+            <th>Deliverable</th>
+            <th>What's included</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hospital Website</td>
+            <td>Full-featured site — booking, status, events, case studies, self-editable media. Delivered in 15 days.</td>
+            <td>₹25,000</td>
+          </tr>
+          <tr>
+            <td>Social Media &amp; Online Profiling</td>
+            <td>Instagram, Facebook, WhatsApp Business, Google Business Profile, online business profiling — JustDial, Practo, Sulekha &amp; local directories. X &amp; Threads if required.</td>
+            <td>Included</td>
+          </tr>
+          <tr>
+            <td>Admin Panel</td>
+            <td>Unified dashboard — website content, social scheduling, bookings, query inbox, analytics. 1 month delivering period included; remains active for the full year.</td>
+            <td>Complimentary</td>
+          </tr>
+          <tr>
+            <td>Ads Management</td>
+            <td>Meta + Google campaign setup, targeting, optimisation and monthly reporting.</td>
+            <td>₹6,000 / month</td>
+          </tr>
+          <tr>
+            <td>Ad Creative Team</td>
+            <td>Dedicated creative production — Marathi graphics, video editing, ad copy and design for all campaigns.</td>
+            <td>₹2,000 / month</td>
+          </tr>
+          <tr>
+            <td>Ad Credits</td>
+            <td>₹8,000/month ad budget paid directly to Meta &amp; Google — billed to client's card or account.</td>
+            <td>Client pays directly</td>
+          </tr>
+          <tr>
+            <td>Domain</td>
+            <td>Purchased on GoDaddy or Google Domains (~₹500–1,000/yr). Owned by you.</td>
+            <td>Client purchases</td>
+          </tr>
+          <tr class="trow">
+            <td>Website Renewal &amp; Maintenance</td>
+            <td>Annual hosting, security updates, performance monitoring and minor content updates.</td>
+            <td>₹10,000 / year</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chips">
+      <div class="chip">
+        <div class="chip-lbl">One-time investment</div>
+        <div class="chip-amt">₹25,000</div>
+        <div class="chip-note">Website + all platform setups</div>
+      </div>
+      <div class="chip">
+        <div class="chip-lbl">Monthly management</div>
+        <div class="chip-amt">₹8,000</div>
+        <div class="chip-note">Ads management + creative team</div>
+      </div>
+      <div class="chip">
+        <div class="chip-lbl">Ad credits (monthly)</div>
+        <div class="chip-amt">₹8,000</div>
+        <div class="chip-note">Paid directly to Meta &amp; Google</div>
+      </div>
+      <div class="chip">
+        <div class="chip-lbl">Annual renewal</div>
+        <div class="chip-amt">₹10,000</div>
+        <div class="chip-note">Hosting + maintenance</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="page-footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="wordmark">
+        <div class="wordmark-dot"></div>
+        <div class="wordmark-text">Revearts <span>/ Digital Growth Agency</span></div>
+      </div>
+      <div class="footer-note">Prepared exclusively for Gosavi Hospital &amp; Critical Center, Chikhli, Buldhana · May 2026</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
